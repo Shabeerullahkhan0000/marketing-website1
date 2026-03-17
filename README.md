@@ -35,3 +35,18 @@ You can open `index.html` directly in a browser.
 
 Note: Stripe redirects work best after you deploy (because the redirect URLs should be real HTTPS URLs).
 
+## Auto commit + push (PowerShell)
+
+If you really want auto-commit + auto-push, run:
+
+```powershell
+.\auto-git.ps1
+```
+
+This script will:
+
+- Commit + push **only tracked file changes** (`git add -u`)
+- Ignore changes inside `.git/` (and a few noisy folders)
+
+Important: auto-push can accidentally publish secrets. Avoid adding private keys to this repo.
+
